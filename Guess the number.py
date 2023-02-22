@@ -1,5 +1,8 @@
 import random
-
+"""
+This is a number guessing game. The user has to guess a random number 
+between 1 and 100. The game ends when the user correctly guesses the number.
+"""
 # pick a number 1 - 100
 number = random.randint(1, 100)
 
