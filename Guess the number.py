@@ -1,25 +1,25 @@
 import random
 
-# wylosuj liczbę z zakresu 1 - 100
+# pick a number 1 - 100
 number = random.randint(1, 100)
 
 while True:
-    # pobierz liczbę od użytkownika
+    # get number from user
     guess = input("Guess the number: ")
 
     try:
-        # spróbuj przekonwertować wprowadzony napis na liczbę całkowitą
+        # try to convert the entered string to integer
         guess = int(guess)
     except ValueError:
-        # jeśli nie udało się skonwertować, wyświetl komunikat i kontynuuj pętlę
+        # if the conversion failed, display a message and continue the loop
         print("It's not a number!")
         continue
 
-    # porównaj liczbę wprowadzoną przez użytkownika z wylosowaną liczbą
+    # compare the number entered by the user with the number drawn
     if guess < number:
         print("Too small!")
     elif guess > number:
         print("Too big!")
     else:
         print("You win!")
-        break  # zakończ działanie pętli
+        break  # end the loop
